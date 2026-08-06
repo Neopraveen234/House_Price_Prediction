@@ -2,7 +2,7 @@ import joblib
 import pandas as pd
 import os
 from datetime import datetime
-
+from pathlib import Path
 
 # --------------------------------------------------
 # Model Functions
@@ -58,7 +58,13 @@ def save_prediction(history):
     Save prediction history to a CSV file.
     """
 
+    BASE_DIR=Path(__file__).resolve().parent.parent
+    history_dir=BASE_DIR/"history"
+    history_dir.mkdir(exist_ok=True)
+
     file_path = "history/prediction.csv"
+
+    os.makedirs("history",exist_ok=True)
 
     current = datetime.now()
 
