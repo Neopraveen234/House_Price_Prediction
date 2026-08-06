@@ -42,7 +42,11 @@ House_Price_Prediction/
 │   ├── train_output.png
 │   ├── prediction_output.png
 │   ├── prediction_history.png
-│   └── scatter_plot.png
+│   ├── scatter_plot.png
+│   ├── home_page.png
+│   ├── prediction_result.png
+│   ├── prediction.png
+│   └── about.png 
 │
 ├── models/
 │   └── house_price_model.pkl
@@ -53,6 +57,7 @@ House_Price_Prediction/
 ├── src/
 │   ├── config.py
 │   ├── train.py
+│   ├── app.py
 │   ├── predict.py
 │   └── utils.py
 │
@@ -95,6 +100,7 @@ The project uses the **Housing Dataset** containing **545 houses**.
 - NumPy
 - Scikit-learn
 - Matplotlib
+- Streamlit
 - Joblib
 - Jupyter Notebook
 - VS Code
@@ -173,6 +179,25 @@ Store Prediction History
 
 ![Scatter Plot](images/scatter_plot.png)
 
+---
+
+# 📸 Application Screenshots
+
+### 🏠 Home Page
+
+![Home Page](images/home_page.png)
+
+### 💰 Prediction Result
+
+![Prediction Result](images/prediction_result.png)
+
+### 📜 Prediction History
+
+![Prediction History](images/prediction.png)
+
+### ℹ️ About Page
+
+![About Page](images/about_page.png)
 
 ---
 
@@ -180,13 +205,14 @@ Store Prediction History
 
 - ✅ Automatic Data Preprocessing
 - ✅ Binary Feature Encoding
-- ✅ One-Hot Encoding
-- ✅ Linear Regression Model
+- ✅ Prediction result Dashboard
+- ✅ House Price using Linear Regression Model
 - ✅ Model Evaluation using MAE, RMSE and R² Score
 - ✅ Save and Load Model using Joblib
 - ✅ Command-Line House Price Prediction
-- ✅ Automatic Prediction History
+- ✅ Prediction History Page
 - ✅ Modular Python Project Structure
+- ✅Inter-Active Streamlit Web Application
 
 ---
 
@@ -295,7 +321,6 @@ The file stores:
 - Random Forest Regression
 - XGBoost Regression
 - Hyperparameter Tuning
-- Streamlit Web Application
 - Model Deployment
 - FastAPI Integration
 - Docker Support
