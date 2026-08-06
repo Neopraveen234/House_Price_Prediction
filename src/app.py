@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import streamlit as st
+from pathlib import Path
 
 from utils import (
     load_model,
@@ -222,7 +223,8 @@ elif page == "📜 Prediction History":
 
     st.divider()
 
-    history_file = "history/prediction.csv"
+    BASE_DIR=Path(__file__).resolve().parent.parent
+    history_file=BASE_DIR/"history"/"prediction.csv"
 
     if os.path.exists(history_file):
 

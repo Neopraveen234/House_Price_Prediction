@@ -58,13 +58,12 @@ def save_prediction(history):
     Save prediction history to a CSV file.
     """
 
-    BASE_DIR=Path(__file__).resolve().parent.parent
-    history_dir=BASE_DIR/"history"
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+    history_dir = BASE_DIR / "history"
     history_dir.mkdir(exist_ok=True)
 
-    file_path = "history/prediction.csv"
-
-    os.makedirs("history",exist_ok=True)
+    file_path = history_dir / "prediction.csv"
 
     current = datetime.now()
 
@@ -73,7 +72,7 @@ def save_prediction(history):
 
     df = pd.DataFrame([history])
 
-    if (not os.path.exists(file_path))or(os.path.getsize(file_path)==0):
+    if not file_path.exists() or file_path.stat().st_size == 0:
         df.to_csv(
             file_path,
             index=False
@@ -81,7 +80,7 @@ def save_prediction(history):
     else:
         df.to_csv(
             file_path,
-            mode='a',
+            mode="a",
             header=False,
             index=False
         )
